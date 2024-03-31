@@ -1,14 +1,14 @@
 export const THEME_CONFIG: App.Locals['config'] = {
   /** blog title */
-  title: "活版印字",
+  title: "流殃",
   /** your name */
-  author: "Typography",
+  author: "sunheyi",
   /** website description */
   desc: "Rediscory the beauty of typography",
   /** your deployed domain */
   website: "https://astro-theme-typography.vercel.app/",
   /** your locale */
-  locale: "en-us",
+  locale: "zh-cn",
   /** theme style */
   themeStyle: "light",
   /** your socials */

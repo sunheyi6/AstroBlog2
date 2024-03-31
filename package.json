@@ -8,8 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "new-post": "./scripts/new-post.sh",
-    "update-theme": "./scripts/update-theme.sh"
+    "new-post": "node scripts/new-post.js",
+    "update-theme": "cross-env OS_TYPE=unix sh scripts/update-theme.sh || cross-env OS_TYPE=win cmd /c scripts/update-theme.bat"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
@@ -28,6 +28,7 @@
     "@types/sanitize-html": "^2.9.5",
     "@unocss/reset": "^0.58.5",
     "@unocss/transformer-directives": "^0.58.5",
+    "cross-env": "^7.0.3",
     "markdown-it": "^14.0.0",
     "sanitize-html": "^2.11.0",
     "unocss": "^0.58.5"
