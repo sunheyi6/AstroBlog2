@@ -1,7 +1,7 @@
 ---
 title: Virtualbox虚拟机网络模型
 slug: '2f718fcc'
-pubDate: 2022-10-02 13:58:00
+pubDate: 2022-10-02
 tags:
    - java
 ogImage: https://top-img.pupper.cn/top-img/top-img-64.webp

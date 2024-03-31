@@ -1,11 +1,9 @@
 ---
 title: hexo自动获取图片主色
-pubDateTime: 2023-12-07 14:09:29
+pubDate: 2023-12-07 14:09:29
 tags:
   - hexo
 ogImage: 'https://top-img.pupper.cn/top-img/top-img-109.webp'
-
-slug: 'e458c4a8'
 ---
 
 ## 缘由

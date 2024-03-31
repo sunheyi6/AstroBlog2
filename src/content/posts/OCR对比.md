@@ -1,6 +1,6 @@
 ---
 title: OCR对比
-pubDate: 2023-12-27 17:39:11
+pubDate: 2023-12-27
 tags:
   - '2023'
 slug: '536c3de7'

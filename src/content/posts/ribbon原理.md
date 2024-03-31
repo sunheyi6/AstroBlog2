@@ -1,7 +1,7 @@
 ---
 title: ribbon原理
 slug: '99b39663'
-pubDate: 2022-03-23 09:11:00
+pubDate: 2022-03-23
 tags:
    - java
 ogImage: https://top-img.pupper.cn/top-img/top-img-186.webp

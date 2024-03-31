@@ -3,7 +3,7 @@ title: vagrant使用
 tags:
   - linux
 slug: '4202801640'
-pubDate: 2021-03-22 10:48:50
+pubDate: 2021-03-22
 author: 孙贺毅
 ---
 

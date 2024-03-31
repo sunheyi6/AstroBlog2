@@ -3,7 +3,7 @@ title: Synchronized
 tags:
   - java并发
 slug: '4124822084'
-pubDate: 2021-03-27 09:06:47
+pubDate: 2021-03-27
 author: 孙贺毅
 ogImage: https://top-img.pupper.cn/top-img/top-img-254.webp
 

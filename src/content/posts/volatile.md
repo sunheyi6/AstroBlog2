@@ -3,7 +3,7 @@ title: volatile
 tags:
   - java并发
 slug: '4266433718'
-pubDate: 2021-03-27 09:07:59
+pubDate: 2021-03-27
 author: 孙贺毅
 ogImage: https://top-img.pupper.cn/top-img/top-img-248.webp
 

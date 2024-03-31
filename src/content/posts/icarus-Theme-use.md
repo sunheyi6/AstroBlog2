@@ -3,7 +3,7 @@ title: icarus Theme use
 tags:
   - icarus
 slug: '3750237992'
-pubDate: 2021-04-22 19:01:16
+pubDate: 2021-04-22
 author: 孙贺毅
 ogImage: https://top-img.pupper.cn/top-img/top-img-249.webp
 

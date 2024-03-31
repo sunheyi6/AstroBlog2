@@ -3,8 +3,7 @@ title: 解决hexo更新时间问题
 tags:
   - hexo
 author: 孙贺毅
-slug: '4257638701'
-pubDateTime: 2023-05-29 10:47:33
+pubDate: 2023-05-29 10:47:33
 updated: 2023-05-29T10:47:33.000Z
 ogImage: https://top-img.pupper.cn/top-img/top-img-85.webp
 

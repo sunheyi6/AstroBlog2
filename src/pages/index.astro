@@ -4,7 +4,7 @@ import Post from '~/components/Post.astro'
 import { getPosts, getPostDescription } from '~/utils'
 import Pagination from '~/components/Pagination.astro'
 
-const posts = (await getPosts()).slice(0, 5)
+const posts = (await getPosts()).slice(-8).reverse();
 
 const { translate: t } = Astro.locals
 

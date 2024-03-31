@@ -3,7 +3,7 @@ title: idea使用技巧
 tags:
   - idea
 slug: '2692604028'
-pubDate: 2021-04-02 13:58:45
+pubDate: 2021-04-02
 author: 孙贺毅
 ogImage: https://top-img.pupper.cn/top-img/top-img-139.webp
 

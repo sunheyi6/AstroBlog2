@@ -1,7 +1,7 @@
 ---
 title: redis cluster
 slug: '63534'
-pubDate: 2021-03-21 21:36:03
+pubDate: 2021-03-21
 tags: 
    - redis
 author: 孙贺毅

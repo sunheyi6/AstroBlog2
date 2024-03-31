@@ -3,7 +3,7 @@ title: hexo部署到github两种方式对比
 tags:
   - hexo
 slug: '2efb9f75'
-pubDate: 2023-11-24 15:34:17
+pubDate: 2023-11-24
 updated: 2023-11-27 16:34:17
 ogImage: https://shyblog.oss-cn-beijing.aliyuncs.com/img/Converted_Hexo_Deployment_Comparison.jpg
 ---

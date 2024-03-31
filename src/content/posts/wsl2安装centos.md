@@ -2,7 +2,7 @@
 title: wsl2安装centos
 tags:
   - centos
-pubDate: 2024-03-28 09:48:00
+pubDate: 2024-03-28
 author: 孙贺毅
 slug: 'wsl2InstallCentos'
 featured: false

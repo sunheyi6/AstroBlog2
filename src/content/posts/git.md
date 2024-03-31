@@ -3,7 +3,7 @@ title: git
 tags:
   - git
 slug: '1368285564'
-pubDate: 2021-04-18 09:10:24
+pubDate: 2021-04-18
 author: 孙贺毅
 ogImage: https://top-img.pupper.cn/top-img/top-img-174.webp
 
