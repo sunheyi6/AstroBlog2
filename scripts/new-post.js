@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+const pinyin = require('pinyin-pro');
 
 // 获取当前文件的目录
 const __filename = fileURLToPath(import.meta.url);
@@ -19,6 +20,20 @@ function formatTimestamp(date) {
   const seconds = pad(date.getSeconds());
 
   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+}
+
+function generateSlug(title) {
+  return pinyin(title, {
+    style: pinyin.STYLE_NORMAL,
+    segment: true,
+    heteronym: false
+  }).map((word) => word[0])
+    .join('-')
+    .toLowerCase()
+    .replace(/[\s_]+/g, '-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/--+/g, '-')
+    .replace(/^-+|-+$/g, '');
 }
 
 // 获取文章标题
@@ -43,12 +58,13 @@ if (fs.existsSync(filepath)) {
 
 // 获取当前日期和时间
 const timestamp = formatTimestamp(new Date());
-
+const slug=generateSlug(title);
 // 创建新的文章文件并写入头部信息
 const header = `---
 title: ${title}
 pubDate: ${timestamp}
 categories: []
+slug ${slug}
 description: ''
 ---
 

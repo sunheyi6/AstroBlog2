@@ -232,6 +232,8 @@
     padding-block-end: 1%;
     /*padding-inline-start: 16px;*/
     /*padding-inline-end: 16px;*/
+    border-radius: 2%; /* 50% 表示圆形边框 */
+    border: 2px solid #000; /* 边框样式和颜色 */
     background-color: rgba(0, 0, 0, .054)
 }
 

@@ -20,12 +20,30 @@ export async function getCategories() {
   return categories
 }
 
+export async function getTags() {
+  const posts = await getPosts()
+
+  const tags = new Map<string, Post[]>()
+
+  posts.forEach((post) => {
+    if (post.data.tags) {
+      post.data.tags.forEach((c) => {
+        const posts = tags.get(c) || []
+        posts.push(post)
+        tags.set(c, posts)
+      })
+    }
+  })
+
+  return tags
+}
+
 export async function getPosts() {
   const posts = await getCollection('posts')
   posts.sort((a, b) => {
     const aDate = a.data.pubDate || new Date()
     const bDate = b.data.pubDate || new Date()
-    return aDate.getTime() - bDate.getTime()
+    return bDate.getTime() - aDate.getTime()
   })
   return posts
 }
@@ -55,4 +73,9 @@ export function formatDate(date?: Date) {
 export function getPathFromCategory(category: string, category_map: {name: string, path: string}[]) {
   const mappingPath = category_map.find(l => l.name === category)
   return mappingPath ? mappingPath.path : category
+}
+
+export function getPathFromTag(tag: string, tag_map: {name: string, path: string}[]) {
+  const mappingPath = tag_map.find(l => l.name === tag)
+  return mappingPath ? mappingPath.path : tag
 }

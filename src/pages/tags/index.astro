@@ -1,0 +1,19 @@
+---
+import ListItem from '~/components/ListItem.astro'
+import ListSection from '~/components/ListSection.astro'
+import LayoutDefault from '~/layouts/LayoutDefault.astro'
+import {getPathFromTag, getTags} from "../../utils";
+
+const {translate: t} = Astro.locals
+const {tag_map} = Astro.locals.config;
+
+const tags = await getTags()
+---
+
+<LayoutDefault>
+    <ListSection title={t('Tags')}>
+        {Array.from(tags).map(([key, value]) =>
+                <ListItem title={key} href={`/tags/${getPathFromTag(key, tag_map)}`}
+                          description={t('tags_count', value.length)}/>)}
+    </ListSection>
+</LayoutDefault>

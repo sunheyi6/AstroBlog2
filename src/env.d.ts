@@ -34,6 +34,10 @@ declare namespace App {
         name: string;
         path: string;
       }>,
+      tag_map:Array<{
+        name: string;
+        path: string;
+      }>,
     }
     translate: (key: string, param?: string | number) => string;
   }
