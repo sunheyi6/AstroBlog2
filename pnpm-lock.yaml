@@ -50,8 +50,8 @@ devDependencies:
     specifier: ^0.58.8
     version: 0.58.8
   '@unocss/transformer-directives':
-    specifier: ^0.58.5
-    version: 0.58.5
+    specifier: ^0.58.8
+    version: 0.58.8
   cross-env:
     specifier: ^7.0.3
     version: 7.0.3
@@ -1399,6 +1399,10 @@ packages:
     resolution: {integrity: sha512-qbPqL+46hf1/UelQOwUwpAuvm6buoss43DPYHOPdfNJ+NTWkSpATQMF0JKT04QE0QRQbHNSHdMe9ariG+IIlCw==}
     dev: true
 
+  /@unocss/core@0.58.8:
+    resolution: {integrity: sha512-R3KuNTzF6G+bb2Qqg4LNLTWHh4TGU8iQJ4KOlpWHrPKAhDSCZ3XY9lSXoepCPwv+JcGEwA97Msa3zZ5p+QDoFg==}
+    dev: true
+
   /@unocss/extractor-arbitrary-variants@0.58.5:
     resolution: {integrity: sha512-KJQX0OJKzy4YjJo09h2la2Q+cn5IJ1JdyPVJJkzovHnv7jSBWzsfct+bj/6a+SJ4p4JBIqEJz3M/qxHv4EPJyA==}
     dependencies:
@@ -1506,6 +1510,14 @@ packages:
       magic-string: 0.30.7
     dev: true
 
+  /@unocss/rule-utils@0.58.8:
+    resolution: {integrity: sha512-F7TKtTkiV9ICf8JMYO1+Eq/5zrrV7Fw966rQfHfIKrN6Vwo3tw84b5R0bLJghAFtb9UuD7q9eCfy6WBQK0d7Tw==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@unocss/core': 0.58.8
+      magic-string: 0.30.8
+    dev: true
+
   /@unocss/scope@0.58.5:
     resolution: {integrity: sha512-vSentagAwYTnThGRCjzZ6eNSSRuzdWBl21L1BbvVNM91Ss/FugQnZ1hd0m3TrVvvStYXnFVHMQ/MjCAEJ4cMYg==}
     dev: true
@@ -1538,6 +1550,14 @@ packages:
     dependencies:
       '@unocss/core': 0.58.5
       '@unocss/rule-utils': 0.58.5
+      css-tree: 2.3.1
+    dev: true
+
+  /@unocss/transformer-directives@0.58.8:
+    resolution: {integrity: sha512-KdNzgmL5gdls1MTRvB7DKJRbLai1t8JeKCN+0H1lygzKMAhp8zItRei/F0MaSdbWdviNnGcAXqbCkbmGR72vaA==}
+    dependencies:
+      '@unocss/core': 0.58.8
+      '@unocss/rule-utils': 0.58.8
       css-tree: 2.3.1
     dev: true
 
@@ -2089,13 +2109,6 @@ packages:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
     dev: false
 
-  /commander@1.1.1:
-    resolution: {integrity: sha512-71Rod2AhcH3JhkBikVpNd0pA+fWsmAaVoti6OR38T76chA7vE3pSerS0Jor4wDw+tOueD2zLVvFOw5H0Rcj7rA==}
-    engines: {node: '>= 0.6.x'}
-    dependencies:
-      keypress: 0.1.0
-    dev: false
-
   /common-ancestor-path@1.0.1:
     resolution: {integrity: sha512-L3sHRo1pXXEqX8VU28kfgUY+YGsk09hPqZiZmLacNib6XNTCM8ubYeT7ryXQw8asB1sKgcU5lkB7ONug08aB8w==}
     dev: false
@@ -2134,7 +2147,7 @@ packages:
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0}
     dependencies:
       mdn-data: 2.0.30
-      source-map-js: 1.0.2
+      source-map-js: 1.2.0
     dev: true
 
   /cssesc@3.0.0:
@@ -2910,10 +2923,6 @@ packages:
     resolution: {integrity: sha512-AilxAyFOAcK5wA1+LeaySVBrHsGQvUFCDWXKpZjzaL0PqW+xfBOttn8GNtWKFWqneyMZj41MWF9Kl6iPWLwgOA==}
     dev: true
 
-  /keypress@0.1.0:
-    resolution: {integrity: sha512-x0yf9PL/nx9Nw9oLL8ZVErFAk85/lslwEP7Vz7s5SI1ODXZIgit3C5qyWjw4DxOuO/3Hb4866SQh28a1V1d+WA==}
-    dev: false
-
   /kind-of@6.0.3:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
     engines: {node: '>=0.10.0'}
@@ -2999,6 +3008,13 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
+
+  /magic-string@0.30.8:
+    resolution: {integrity: sha512-ISQTe55T2ao7XtlAStud6qwYPZjE4GK1S/BeVPus4jrq6JuOnQ00YKQC581RWhR122W7msZV263KzVeLoqidyQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.4.15
+    dev: true
 
   /markdown-it@14.0.0:
     resolution: {integrity: sha512-seFjF0FIcPt4P9U39Bq1JYblX0KZCjDLFFQPHpL5AzHpqPEKtosxmdq/LTVZnjfH7tjt9BxStm+wXcDBNuYmzw==}
@@ -3701,25 +3717,6 @@ packages:
 
   /pinyin-pro@3.19.6:
     resolution: {integrity: sha512-oWb34orr12+DjXf6gtGMB+gIpjRi7DZzyJE66ultbmNzVhpimM/utGtMI8GcbOy/lb26Ph/nogwNYriRPu+SGQ==}
-    dev: false
-
-  /pinyin@4.0.0-alpha.0:
-    resolution: {integrity: sha512-hdxO/2RuLWarhLaIcGKdXjkFZ0hFr3W/Yrvrd0YPxuIafixMZSAa4jvxskYLgYHE8OkOXkGsxMsEScwGzqKe3g==}
-    engines: {install-node: ^18.0.0}
-    hasBin: true
-    peerDependencies:
-      '@node-rs/jieba': ^1.6.0
-      nodejieba: 2.5.2
-      segmentit: ^2.0.3
-    peerDependenciesMeta:
-      '@node-rs/jieba':
-        optional: true
-      nodejieba:
-        optional: true
-      segmentit:
-        optional: true
-    dependencies:
-      commander: 1.1.1
     dev: false
 
   /pkg-dir@4.2.0:
