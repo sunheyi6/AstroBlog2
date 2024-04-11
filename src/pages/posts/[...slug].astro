@@ -42,8 +42,26 @@ const { translate: t} = Astro.locals
       rightUrl={`/posts/${next?.slug}/`}
       showPageCount={false}
     />
+   <div id="waline"></div>
 </LayoutDefault>
+<head>
+  <!-- ... -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+  />
+  <!-- ... -->
+</head>
+  <!-- ... -->
 
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+    init({
+      el: '#waline',
+      serverURL: 'https://waline-virid-ten.vercel.app',
+    });
+  </script>
 
 <script>
   const copyButtonLabel = "Copy";
