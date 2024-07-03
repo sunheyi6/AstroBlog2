@@ -18,7 +18,7 @@
     "@astrojs/sitemap": "^3.1.2",
     "astro": "^4.5.12",
     "astro-robots-txt": "^1.0.0",
-    "astro-seo": "^0.8.0",
+    "astro-seo": "^0.8.4",
     "dayjs": "^1.11.11",
     "pinyin-pro": "^3.19.6",
     "typescript": "^5.3.3",
