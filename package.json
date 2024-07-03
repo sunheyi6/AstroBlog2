@@ -10,7 +10,6 @@
     "astro": "astro",
     "new-post": "node scripts/new-post.js",
     "update-theme": "cross-env OS_TYPE=unix sh scripts/update-theme.sh || cross-env OS_TYPE=win cmd /c scripts/update-theme.bat",
-    "postbuild": "pagefind --site dist"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
