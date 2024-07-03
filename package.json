@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "new-post": "node scripts/new-post.js",
-    "update-theme": "cross-env OS_TYPE=unix sh scripts/update-theme.sh || cross-env OS_TYPE=win cmd /c scripts/update-theme.bat",
+    "update-theme": "cross-env OS_TYPE=unix sh scripts/update-theme.sh || cross-env OS_TYPE=win cmd /c scripts/update-theme.bat"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
