@@ -9,13 +9,13 @@ import LayoutDefault from "../../layouts/LayoutDefault.astro";
         let url = 'http://39.105.151.29:5230'//这里地址最后面不要有'/'
 
         fetch(url + '/api/v1/memo?creatorId=1&limit=30').then(res => res.json()).then(data => { // 注意修改"你的ID"
-            let items = [],
+            let items: any[] = [],
                 html = '';
-            data.forEach(item => {
+            data.forEach((item:any) => {
                 items.push(Format(item))
             });
             //if (items.length == 30) document.querySelector('.limit').style.display = 'block';
-            items.forEach(item => {
+            items.forEach((item: any) => {
                 html += `<div id="talk_item" style="        border: 5px solid #e0e3ed;
         box-shadow: 0 5px 10px rgb(189 189 189 / 10%);
         transition: all .3s ease-in-out;
@@ -26,7 +26,10 @@ import LayoutDefault from "../../layouts/LayoutDefault.astro";
     <span class="talk_date">${item.date}</span></div><div class="talk_content">${item.content}</div><a href="javascript:;"onclick="goComment('${item.text}')"><span class="icon"><i class="fa-solid fa-message fa-fw"></i></span></a></div></div>
 </div>` // 注意修改头像链接和名称（直接替换掉）
             })
-            document.getElementById('talk').innerHTML = html
+            const talkElement = document.getElementById('talk');
+            if (talkElement !== null) {
+                talkElement.innerHTML = html;
+            }
         })
         // 页面评论
         // function goComment(e) {
@@ -36,18 +39,18 @@ import LayoutDefault from "../../layouts/LayoutDefault.astro";
         //     btf.snackbarShow("无需删除空行，直接输入评论即可", !1, 2e3);
         // }
         // 页面内容格式化
-        function Format(item) {
+        function Format(item:any) {
             let date = getTime(new Date(item.createdTs * 1000).toString()),
                 content = item.content,
                 tag = item.content.match(/\{(.*?)\}/g),
                 imgs = content.match(/!\[.*\]\(.*?\)/g),
                 text = ''
-            if (imgs) imgs = imgs.map(item => {
+            if (imgs) imgs = imgs.map((item:any) => {
                 return item.replace(/!\[.*\]\((.*?)\)/, '$1')
             })
             if (item.resourceList.length) {
                 if (!imgs) imgs = []
-                item.resourceList.forEach(t => {
+                item.resourceList.forEach((t: any) => {
                     if (t.externalLink) imgs.push(t.externalLink)
                     else imgs.push(`${url}/o/r/${t.id}/${t.publicId}/${t.filename}`)
                 })
@@ -56,7 +59,7 @@ import LayoutDefault from "../../layouts/LayoutDefault.astro";
             content = text.replace(/\[(.*?)\]\((.*?)\)/g, `<a href="$2">@$1</a>`);
             if (imgs) {
                 content += `<div class="zone_imgbox">`
-                imgs.forEach(e => content += `<a href="${e}" data-fancybox="gallery" class="fancybox" data-thumb="${e}"><img class="no-lazyload" src="${e}"></a>` // 2023-02-06更新
+                imgs.forEach((e:string) => content += `<a href="${e}" data-fancybox="gallery" class="fancybox" data-thumb="${e}"><img class="no-lazyload" src="${e}"></a>` // 2023-02-06更新
                 )
                 content += '</div>'
             }
@@ -69,7 +72,7 @@ import LayoutDefault from "../../layouts/LayoutDefault.astro";
         }
 
         // 页面时间格式化
-        function getTime(time) {
+        function getTime(time: string) {
             let d = new Date(time),
                 ls = [d.getFullYear(), d.getMonth() + 1, d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds()];
             for (let i = 0; i < ls.length; i++) {

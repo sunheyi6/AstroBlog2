@@ -17,12 +17,10 @@ export async function getStaticPaths() {
 }
 
 const { posts } = Astro.props
-const { category, name } = Astro.params
-
 ---
 
 <LayoutDefault>
-  <ListSection title={name}>
+  <ListSection>
     {posts.map((post) => <ListItem title={post.data.title} href={`/posts/${post.slug}/`} description={formatDate(post.data.pubDate)} />)}
   </ListSection>
 </LayoutDefault>
