@@ -7,6 +7,7 @@ const posts = defineCollection({
     title: z.string(),
     description: z.string().optional(),
     pubDate: z.coerce.date().optional(),
+    lastModifiedDate: z.coerce.date().optional(),
     customData: z.string().optional(),
     banner: image()
       .refine((img) => Math.max(img.width, img.height) <= 4096, {
