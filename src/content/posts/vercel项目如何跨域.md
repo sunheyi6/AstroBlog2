@@ -9,7 +9,7 @@ ogImage: https://top-img.pupper.cn/top-img/top-img-182.webp
 
 ---
 
-其实很简单，在你根目录项目下新建一个vercel.json
+其实很简单，在你的项目根目录下新建一个vercel.json
 
 ```json
 {
