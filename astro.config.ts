@@ -3,6 +3,7 @@ import UnoCSS from 'unocss/astro';
 import { THEME_CONFIG } from "./src/theme.config";
 import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
+import partytown from '@astrojs/partytown'
 
 // https://astro.build/config
 export default defineConfig({
@@ -32,6 +33,11 @@ export default defineConfig({
       injectReset: true
     }),
     robotsTxt(),
-    sitemap()
+    sitemap(),
+      partytown({
+			config: {
+			  forward: ["dataLayer.push"],
+			},
+		}),
   ]
 });
