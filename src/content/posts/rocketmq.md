@@ -57,7 +57,7 @@ Dledger采用的是raft算法
 
 ## 下载安装
 
-```Java
+```java
 #下载rocketmq
 https://github.com/apache/rocketmq
 

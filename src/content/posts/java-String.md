@@ -17,7 +17,7 @@ string类型的介绍
 
 ## 不可变性
 
-```Java
+```java
 //由于是final，所以string是不可继承的
 public final class String
 //final修饰的char[]代表了被存储的数据不可更改性
@@ -86,7 +86,7 @@ jdk6的时候，当截取字符串的时候，会在堆中new 一个新的string
 
 既然已经知道了上述问题所在，那么只需要new一个新的string的时候，让这个string指向自己的包含的char数组即可
 
-```Java
+```java
         public String(char value[], int offset, int count) {
         if (offset < 0) {
             throw new StringIndexOutOfBoundsException(offset);
@@ -111,7 +111,7 @@ jdk6的时候，当截取字符串的时候，会在堆中new 一个新的string
 
 ## replaceFirst、replaceAll、replace区别
 
-```Java
+```java
     public String replaceFirst(String regex, String replacement) {
         return Pattern.compile(regex).matcher(this).replaceFirst(replacement);
     }
@@ -134,7 +134,7 @@ replace的作用是将原有字符串的所有target替换为repalcement
 
 ### StringBuilder
 
-```Java
+```java
     public StringBuilder() {
         super(16);
     }
@@ -164,7 +164,7 @@ replace的作用是将原有字符串的所有target替换为repalcement
 
 ### StingBuffer
 
-```Java
+```java
     @Override
     public synchronized int length() {
         return count;
@@ -188,7 +188,7 @@ replace的作用是将原有字符串的所有target替换为repalcement
 
 https://juejin.im/post/6844903960608784392
 
-```Java
+```java
 package com.test;
 
 public class demo {
@@ -208,7 +208,7 @@ public class demo {
 
 stirng
 
-```Java
+```java
         //stirng不能为null，为null会报NullPointerException
         public String toString() {
         return this;
@@ -221,7 +221,7 @@ stirng
 
 integer
 
-```Java
+```java
     public static String toString(int i, int radix) {
         if (radix < Character.MIN_RADIX || radix > Character.MAX_RADIX)
             radix = 10;
@@ -255,7 +255,7 @@ integer
 
 ## switch对String的支持
 
-```Java
+```java
 package com.test;
 
 
@@ -297,7 +297,7 @@ public class demo {
 
 实际例子验证：
 
-```Java
+```java
 package com.test;
 
 public class demo02 {
