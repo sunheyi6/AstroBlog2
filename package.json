@@ -12,7 +12,7 @@
     "update-theme": "cross-env OS_TYPE=unix sh scripts/update-theme.sh || cross-env OS_TYPE=win cmd /c scripts/update-theme.bat"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.4",
+    "@astrojs/check": "^0.8.1",
     "@astrojs/partytown": "^2.1.1",
     "@astrojs/rss": "^4.0.4",
     "@astrojs/sitemap": "^3.1.2",
