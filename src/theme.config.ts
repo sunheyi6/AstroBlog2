@@ -33,6 +33,10 @@ export const THEME_CONFIG: App.Locals['config'] = {
     /** your navigation links */
     navs: [
         {
+            name: "Search",
+            href: "/pagefind",
+        },
+        {
             name: "Posts",
             href: "/posts/page/1",
         },
@@ -48,7 +52,7 @@ export const THEME_CONFIG: App.Locals['config'] = {
             name: "Tags",
             href: "/tags"
         },
-                {
+        {
             name: "bb",
             href: "/bb"
         },
