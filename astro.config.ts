@@ -29,9 +29,6 @@ export default defineConfig({
             wrap: true,
         },
     },
-    build: {
-        format: "file",
-    },
     integrations: [
         UnoCSS({
             injectReset: true
