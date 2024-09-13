@@ -37,10 +37,6 @@ export const THEME_CONFIG: App.Locals['config'] = {
             href: "/pagefind",
         },
         {
-            name: "Posts",
-            href: "/posts/page/1",
-        },
-        {
             name: "Archive",
             href: "/archive",
         },
