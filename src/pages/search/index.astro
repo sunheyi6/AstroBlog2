@@ -1,6 +1,8 @@
 ---
 import Search from '../../components/Search';
-import {getPosts} from "../../utils";
-const  posts = await getPosts();
+import {formatDate, getPosts} from "../../utils";
+import * as console from "node:console";
+const allPosts = await getPosts();
+const posts = allPosts.filter(post => (post.data.title));
 ---
-<Search searchList={posts}></Search>
+ <Search client:load searchList={posts}></Search>

@@ -1,7 +1,7 @@
 body {
     --uno: antialiased;
-    color: theme("colors.foreground");
-    background-color: theme("colors.background");
+    /*color: theme("colors.foreground");*/
+    /*background-color: theme("colors.background");*/
     font-family: theme("fontFamily.sans");
     line-height: normal;
     text-align: left;
@@ -33,8 +33,8 @@ article.heti a code:hover {
 
 
 a:hover {
-    color: theme("colors.background");
-    background-color: theme("colors.foreground");
+    /*color: theme("colors.background");*/
+    /*background-color: theme("colors.foreground");*/
     /* border-bottom: solid transparent 2px; */
     /* text-decoration: none; */
 }

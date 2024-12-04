@@ -4,10 +4,11 @@ import { useState } from 'react';
 // Configs fuse.js
 // https://fusejs.io/api/options.html
 const options = {
-	keys: ['frontmatter.title', 'frontmatter.description', 'frontmatter.slug'],
+	keys: ['data.title'],
 	includeMatches: true,
 	minMatchCharLength: 2,
 	threshold: 0.5,
+	tokenize: true,
 };
 
 function Search({ searchList }) {
@@ -15,19 +16,21 @@ function Search({ searchList }) {
 	const [query, setQuery] = useState('');
 
 	const fuse = new Fuse(searchList, options);
+	console.log("4444  "+searchList[1].data.title)
+	console.log("5555  "+searchList[1].slug)
 
 	// Set a limit to the posts: 5
 	const posts = fuse
 		.search(query)
 		.map((result) => result.item)
 		.slice(0, 5);
-
 	function handleOnSearch({ target = {} }) {
 		const { value } = target;
 		setQuery(value);
 	}
 
 return (
+
 	<div>
 		<label htmlFor="search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
 			Search
@@ -80,11 +83,11 @@ return (
 					<li className="py-2">
 						<a
 							className="text-lg text-blue-700 hover:text-blue-900 hover:underline underline-offset-2"
-							href={`/${post.frontmatter.slug}`}
+							href={`/posts/${post.slug}`}
 						>
-							{post.frontmatter.title}
+							{post.data.title}
 						</a>
-						<p className="text-sm text-gray-800">{post.frontmatter.description}</p>
+						<p className="text-sm text-gray-800">{post.data.description}</p>
 					</li>
 				))}
 		</ul>

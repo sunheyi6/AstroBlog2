@@ -8,6 +8,8 @@ import pagefind from "astro-pagefind";
 
 import react from '@astrojs/react';
 
+import tailwind from '@astrojs/tailwind';
+
 // https://astro.build/config
 export default defineConfig({
     site: THEME_CONFIG.website,
@@ -37,5 +39,5 @@ export default defineConfig({
         config: {
             forward: ["dataLayer.push"],
         },
-    }), pagefind(), react()]
+    }), pagefind(), react(), tailwind()]
 });

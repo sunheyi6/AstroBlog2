@@ -40,7 +40,6 @@ export async function getTags() {
 
 export async function getPosts() {
   const posts = await getCollection('posts')
-  console.log("ssss:"+posts);
   posts.sort((a, b) => {
     const aDate = a.data.pubDate || new Date()
     const bDate = b.data.pubDate || new Date()
