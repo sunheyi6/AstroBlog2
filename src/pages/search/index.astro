@@ -1,0 +1,6 @@
+---
+import Search from '../../components/Search';
+import {getPosts} from "../../utils";
+const  posts = await getPosts();
+---
+<Search searchList={posts}></Search>

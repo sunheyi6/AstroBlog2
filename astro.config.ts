@@ -6,6 +6,8 @@ import sitemap from "@astrojs/sitemap";
 import partytown from '@astrojs/partytown'
 import pagefind from "astro-pagefind";
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
     site: THEME_CONFIG.website,
@@ -29,17 +31,11 @@ export default defineConfig({
             wrap: true,
         },
     },
-    integrations: [
-        UnoCSS({
-            injectReset: true
-        }),
-        robotsTxt(),
-        sitemap(),
-        partytown({
-            config: {
-                forward: ["dataLayer.push"],
-            },
-        }),
-        pagefind()
-    ]
+    integrations: [UnoCSS({
+        injectReset: true
+    }), robotsTxt(), sitemap(), partytown({
+        config: {
+            forward: ["dataLayer.push"],
+        },
+    }), pagefind(), react()]
 });

@@ -34,7 +34,7 @@ export const THEME_CONFIG: App.Locals['config'] = {
     navs: [
         {
             name: "Search",
-            href: "/pagefind",
+            href: "/search",
         },
         {
             name: "Archive",
