@@ -30,12 +30,12 @@
     "@iconify-json/mdi": "^1.2.0",
     "@types/markdown-it": "^13.0.7",
     "@types/node": "^20.12.2",
-    "@types/sanitize-html": "^2.9.5",
+    "@types/sanitize-html": "^2.13.0",
     "@unocss/reset": "^0.61.9",
     "@unocss/transformer-directives": "^0.62.3",
     "cross-env": "^7.0.3",
     "markdown-it": "^14.0.0",
-    "sanitize-html": "^2.13.0",
+    "sanitize-html": "^2.13.1",
     "unocss": "^0.58.5"
   }
 }
